@@ -1,0 +1,35 @@
+#!/bin/bash
+# Created by Batah Marayau
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+echo "Connecting To VPN888™ System....."
+sleep 0.2
+IP=$(wget -qO- ipv4.icanhazip.com)
+read -p "Total User To Generate : " banyakuser
+read -p "Expired Date '30' For 1 Month or  [Y-M-D] : " expdate
+today="$(date +"%Y-%m-%d")"
+expire=$(date -d "$aktif days" +"%Y-%m-%d")
+clear
+echo "Script By Batah Marayau"
+echo " "
+echo "Details For Account"
+echo "----------------------------------"
+echo "Host/IP: $IP"
+echo "Squid3 : 8080"  
+echo "OpenSSH : 22"  
+echo "Dropbear : 109, 110, 443"  
+echo "OpenVPN  : TCP 1194 (client config : http://$IP/client.ovpn)"  
+echo "Expired On : $(date -d "$aktif days" +"%d-%m-%Y")"
+  echo "----------------------------------"
+for (( i=1; i <= $banyakuser; i++ ))
+do
+	USER=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`
+	useradd -M -N -s /bin/false -e $expire $USER
+	PASS=`cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 15 | head -n 1`;
+	echo $USER:$USER | chpasswd
+	echo "$i. Username/Password: $USER"
+done
+
+  echo "--------------------------------------"
+  echo " "
