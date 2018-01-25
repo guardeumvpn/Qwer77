@@ -1,0 +1,27 @@
+#!/bin/bash
+# Created by Batah Marayau
+# Uban User.
+red='\e[1;31m'
+green='\e[0;32m'
+blue='\e[1;34m'
+NC='\e[0m'
+echo "Connecting To VPN888™ System....."
+sleep 0.2
+
+
+read -p "Enter Username : " username
+egrep "^$username" /etc/passwd >/dev/null
+if [ $? -eq 0 ]; then
+# proses mengganti passwordnya
+passwd -u $username
+clear
+  echo " "
+  echo "-----------------------------------------------"
+  echo -e "Username ${blue}$username${NC} Sucsesfully ${green}UNLOCKED${NC}."
+  echo -e "Username ${blue}$username${NC} Perfectly UNLOCKED"
+  echo "Just Like Before"
+  echo "-----------------------------------------------"
+else
+echo "Username Not Found On Server"
+    exit 1
+fi
