@@ -1,11 +1,11 @@
 #!/bin/bash
 # ******************************************
-# Program: Autoscript Setup VPS 2017
-# Website: bm86.ml
-# Developer: Batah Marayau
-# Nickname: BM
-# Date: 11-05-2016
-# Last Updated: 05-08-2017
+# Program: Autoscript Setup VPS 2018
+# Website: -
+# Developer: Disastermaster
+# Nickname: DM
+# Date: 01-01-2018
+# Last Updated: 26-01-2018
 # ******************************************
 # START SCRIPT ( guardeumvpn.tk )
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
@@ -23,7 +23,7 @@ echo "TUN is not available"
 exit 3
 fi
 echo "
-AUTOSCRIPT BY KHAI
+AUTOSCRIPT BY DISASTERMASTER
 
 PLEASE CANCEL ALL PACKAGE POPUP
 
@@ -122,26 +122,25 @@ cd /etc/openvpn/
 wget http://45.32.114.217/file/openvpn.tar;tar xf openvpn.tar;rm openvpn.tar
 wget -O /etc/rc.local "http://45.32.114.217/file/rc.local"
 chmod +x /etc/rc.local
-#wget -O /etc/iptables.up.rules "http://45.32.114.217/file/iptables.up.rules"
-#sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
-#iptables-restore < /etc/iptables.up.rules
 # nginx
 apt-get -y install nginx php-fpm php-mcrypt php-cli libexpat1-dev libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/php/7.0/fpm/pool.d/www.conf "http://45.32.114.217/file/www.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup By KHAI → Call, Whatsapp, Telegram : @guardeumvpn </pre>" > /home/vps/public_html/index.php
+echo "<pre>Setup By DISASTERMASTER → Call, Whatsapp, Telegram : @guardeumvpn </pre>" > /home/vps/public_html/index.php
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf "http://45.32.114.217/file/vps.conf"
 sed -i 's/listen = \/var\/run\/php7.0-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
 # etc
 wget -O /home/vps/public_html/client.ovpn "http://45.32.114.217/file/client.ovpn"
+wget -O /home/vps/public_html/client1.ovpn "http://45.32.114.217/file/client.ovpn"
 wget -O /etc/motd "http://45.32.114.217/file/motd"
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
-useradd -m -g users -s /bin/bash khai
-echo "khai:khai" | chpasswd
+sed -i "s/ipserver/$myip/g" /home/vps/public_html/client1.ovpn
+useradd -m -g users -s /bin/bash test
+echo "test:test" | chpasswd
 echo "UPDATE AND INSTALL COMPLETE COMPLETE 99% BE PATIENT"
 rm *.sh;rm *.txt;rm *.tar;rm *.deb;rm *.asc;rm *.zip;rm ddos*;
 clear
@@ -159,10 +158,11 @@ clear
 echo "========================================"  | tee -a log-install.txt
 echo "Service Autoscript VPS (guardeumvpn.tk)"  | tee -a log-install.txt
 echo "----------------------------------------"  | tee -a log-install.txt
-echo "Powered By KHAI → Call, Whatsapp, Telegram : @guardeumvpn"  | tee -a log-install.txt
+echo "Powered By DISASTERMASTER → Call, Whatsapp, Telegram : @guardeumvpn"  | tee -a log-install.txt
 echo "nginx : http://$myip:80"   | tee -a log-install.txt
 echo "Webmin : http://$myip:10000/"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 1194 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : UDP 1194 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 53 (client config : http://$myip/client1.ovpn)"  | tee -a log-install.txt
 echo "Squid3 : 8080"  | tee -a log-install.txt
 echo "OpenSSH : 22"  | tee -a log-install.txt
 echo "Dropbear : 443"  | tee -a log-install.txt
