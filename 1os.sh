@@ -119,7 +119,8 @@ sed -i "s/ipserver/$myip/g" /etc/squid/squid.conf
 # openvpn
 apt-get -y install openvpn
 cd /etc/openvpn/
-wget https://raw.githubusercontent.com/guardeumvpn/Debian9/master/openvpn.tar?token=Ah8GoNepisrmuIAeSzx82PPjDOgEmxdCks5adAwrwA%3D%3D;tar xf openvpn.tar;rm openvpn.tar
+wget -O openvpn.tar "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/openvpn.tar?token=Ah8GoFAm-lcJssFEtLVdPmqWFn-0CjP7ks5adBERwA%3D%3D"
+tar xf openvpn.tar;rm openvpn.tar
 wget -O /etc/rc.local "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/rc.local?token=Ah8GoCCQbnvI5Xhhj477PE6arydOOPXUks5adAxUwA%3D%3D"
 chmod +x /etc/rc.local
 # nginx
