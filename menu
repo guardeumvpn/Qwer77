@@ -29,7 +29,7 @@ function create_user() {
 #    Facebook : @guardeumvpn                #
 #    Whatsapp : @guardeumvpn                #
 #                                           #
-#      Copyright  Guardeum VPN 2017         #
+#      Copyright  Guardeum VPN 2018         #
 #                                           #
 =============================================";
 	echo "
@@ -75,7 +75,7 @@ function renew_user() {
 #    Facebook : @guardeumvpn                #
 #    Whatsapp : @guardeumvpn                #
 #                                           #
-#      Copyright  Guardeum VPN 2017         #
+#      Copyright  Guardeum VPN 2018         #
 #                                           #
 =============================================";
 	echo "
@@ -248,7 +248,7 @@ echo "
 #    Facebook : @guardeumvpn                #
 #    Whatsapp : @guardeumvpn                #
 #                                           #
-#      Copyright  Guardeum VPN 2017         #
+#      Copyright  Guardeum VPN 2018         #
 #                                           #
 =============================================
 ";
