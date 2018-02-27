@@ -165,7 +165,7 @@ echo "Powered By DISASTERMASTER → Call, Whatsapp, Telegram : @guardeumvpn"  | 
 echo "nginx : http://$myip:80"   | tee -a log-install.txt
 echo "Webmin : http://$myip:10000/"  | tee -a log-install.txt
 echo "OpenVPN  : UDP 1194 (client config : http://$myip/client.ovpn)"  | tee -a log-install.txt
-echo "OpenVPN  : TCP 443 (client config : http://$myip/client1.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 53 (client config : http://$myip/client1.ovpn)"  | tee -a log-install.txt
 echo "Squid : 8080"  | tee -a log-install.txt
 echo "OpenSSH : 22"  | tee -a log-install.txt
 echo "Dropbear : 443"  | tee -a log-install.txt
