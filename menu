@@ -255,7 +255,7 @@ echo "
 PS3='
 PLEASE ENTER YOUR CHOICE FROM [1-22] :  '
 options=(
-"Add User" "Renew User" "Delete User" "User List" "Change Password User" "Users Not Expired" "Expired Users" "Autokill User Multi Login" "Current Monitor SSH Users" "Used Data By Users" "RAM VPS Status" "Change Password" "Change Dropbear Port" "Change OpenVPN Port" "Change Squid3 Port" "Auto Restart Server" "Create User Trial" "Generate New User" "Speedtest Server" "User Lock" "User Unlock" "Quit")
+"Add User" "Renew User" "Delete User" "User List" "Change Password User" "Users Not Expired" "Expired Users" "Autokill User Multi Login" "Current Monitor SSH Users" "Used Data By Users" "RAM VPS Status" "Change Password" "Change Dropbear Port" "Change OpenVPN Port" "Change Squid Port" "Auto Restart Server" "Create User Trial" "Generate New User" "Speedtest Server" "User Lock" "User Unlock" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -348,7 +348,7 @@ do
             echo "Dropbear Updated : Port $PORT"
 			break
 			;;
-        "Change Squid3 Port")	
+        "Change Squid Port")	
             echo "What Squid port would you like to change to?"
             read -p "Port: " -e -i 8080 PORT
             sed -i "s/http_port [0-9]*/http_port $PORT/" /etc/squid/squid.conf
