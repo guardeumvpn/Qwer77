@@ -74,16 +74,16 @@ INSTALLER PROCESS PLEASE WAIT
 TAKE TIME 5-10 MINUTE
 "
 # script
-wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/menu?token=Ah8GoGpZNwyIWMTU3SyjUL_TXUJrn7rcks5anoVxwA%3D%3D"
-wget -O /usr/local/bin/autokill "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/autokill?token=Ah8GoFuoCRXX1J79MHIE6FGyC7rckdIQks5anoV1wA%3D%3D"
-wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/user-generate?token=Ah8GoADXChQiWapnPcjfK5b6L4Lau3e0ks5anoV3wA%3D%3D"
-wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/speedtest?token=Ah8GoOyufmvWxKl0U-3Nux1ZBTqhWEqTks5anoV5wA%3D%3D"
-wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/user-lock?token=Ah8GoFhIajvjxZ8iM9fJ6H4EN-MEwmarks5anoV6wA%3D%3D"
-wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/user-unlock?token=Ah8GoKcRJ_Mv318L36RDlx_twwUXJFTUks5anoV8wA%3D%3D"
-wget -O /usr/local/bin/auto-reboot "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/auto-reboot?token=Ah8GoLRgLMDPqFA7UjH5xqv0-JEEZhvsks5anoV_wA%3D%3D"
-wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/user-password?token=Ah8GoLkiAvqYOMtL7Dn6hrPoGunbaeUGks5anoWAwA%3D%3D"
-wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/trial?token=Ah8GoPAcrNZxMAi14z8VjT8cM85jWdlLks5anoWBwA%3D%3D"
-wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/common-password?token=Ah8GoPtnf3s7sSQDmbs6kXKpmN6d7Vkcks5anoWEwA%3D%3D"
+wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/menu"
+wget -O /usr/local/bin/autokill "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/autokill"
+wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/user-generate"
+wget -O /usr/local/bin/speedtest "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/speedtest"
+wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/user-lock"
+wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/user-unlock"
+wget -O /usr/local/bin/auto-reboot "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/auto-reboot"
+wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/user-password"
+wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/trial"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/common-password"
 chmod +x /etc/pam.d/common-password
 chmod +x /usr/local/bin/menu 
 chmod +x /usr/local/bin/autokill 
@@ -105,39 +105,39 @@ sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
 # ssh
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
-wget -O /etc/issue.net "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/banner?token=Ah8GoHhP4InkpLFcmEqJlIi4gqerLdeiks5anoaMwA%3D%3D"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/banner"
 # dropbear
 apt-get -y install dropbear
-wget -O /etc/default/dropbear "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/dropbear?token=Ah8GoD7thc6zCU6g7qfkGRaY6fGRd2Ciks5anoaPwA%3D%3D"
+wget -O /etc/default/dropbear "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 # squid3
 apt-get -y install squid3
-wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/squid.conf?token=Ah8GoB7WSV_QeEepKqMvzWNdHfAYS0f7ks5anoaRwA%3D%3D"
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/squid.conf?token=Ah8GoB7WSV_QeEepKqMvzWNdHfAYS0f7ks5anoaRwA%3D%3D"
+wget -O /etc/squid3/squid.conf "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/squid.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/squid.conf"
 sed -i "s/ipserver/$myip/g" /etc/squid3/squid.conf
 sed -i "s/ipserver/$myip/g" /etc/squid/squid.conf
 # openvpn
 apt-get -y install openvpn
 cd /etc/openvpn/
-wget -O openvpn.tar "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/openvpn.tar?token=Ah8GoP2rI8GEwbFab-vMWV_wDlx7shBzks5anobzwA%3D%3D"
+wget -O openvpn.tar "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/openvpn.tar"
 tar xf openvpn.tar;rm openvpn.tar
-wget -O /etc/rc.local "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/rc.local?token=Ah8GoM1VvwMltpwFYET-dElNNZilyLncks5anocYwA%3D%3D"
+wget -O /etc/rc.local "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/rc.local"
 chmod +x /etc/rc.local
 # nginx
 apt-get -y install nginx php-fpm php-mcrypt php-cli libexpat1-dev libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/php/7.0/fpm/pool.d/www.conf "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/www.conf?token=Ah8GoB-EyO1_OFd4ANcLpzSwjyilKMjoks5anodCwA%3D%3D"
+wget -O /etc/php/7.0/fpm/pool.d/www.conf "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/www.conf"
 mkdir -p /home/vps/public_html
 echo "<pre>Setup By DISASTERMASTER → Call, Whatsapp, Telegram : @guardeumvpn </pre>" > /home/vps/public_html/index.php
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/vps.conf?token=Ah8GoAglTbTvhnr15a_Q8aeQwT4vmimqks5anodDwA%3D%3D"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/vps.conf"
 sed -i 's/listen = \/var\/run\/php7.0-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/7.0/fpm/pool.d/www.conf
 # etc
-wget -O /home/vps/public_html/client.ovpn "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/client.ovpn?token=Ah8GoGsMP7lcG_AFL3rYvnsJ8x4ir1Hhks5anoeNwA%3D%3D"
-wget -O /home/vps/public_html/client1.ovpn "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/client1.ovpn?token=Ah8GoHJSR1niTy5hi6u2PHbLJGXLjjEnks5anoePwA%3D%3D"
-wget -O /etc/motd "https://raw.githubusercontent.com/guardeumvpn/Debian9/master/motd?token=Ah8GoEk4icSH5BEPV8S07zKa-trEda9bks5anoeRwA%3D%3D"
+wget -O /home/vps/public_html/client.ovpn "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/client.ovpn"
+wget -O /home/vps/public_html/client1.ovpn "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/client1.ovpn"
+wget -O /etc/motd "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/motd"
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client1.ovpn
