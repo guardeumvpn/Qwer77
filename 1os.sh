@@ -141,8 +141,8 @@ wget -O /etc/motd "https://raw.githubusercontent.com/guardeumvpn/Qwer77/master/m
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client.ovpn
 sed -i "s/ipserver/$myip/g" /home/vps/public_html/client1.ovpn
-useradd -m -g users -s /bin/bash test
-echo "test:test" | chpasswd
+#useradd -m -g users -s /bin/bash test
+#echo "test:test" | chpasswd
 echo "UPDATE AND INSTALL COMPLETE COMPLETE 99% BE PATIENT"
 rm *.sh;rm *.txt;rm *.tar;rm *.deb;rm *.asc;rm *.zip;rm ddos*;
 clear
